@@ -19,6 +19,14 @@ function handleAnsawer(value){
       alert("your energy level is : "+ energy);
     }
 }
-
+document.getElementById("good").onclick = () => handleAnsawer(9);
+document.getElementById("notgood").onclick = () => handleAnsawer(5);
+document.getElementById("bad").onclick = () => handleAnsawer(2);
+document.getElementById("happy").onclick = () => handleAnsawer(9);
+document.getElementById("ok").onclick = () => handleAnsawer(5);
+document.getElementById("sad").onclick = () => handleAnsawer(2);
+document.getElementById("very").onclick = () => handleAnsawer(9);
+document.getElementById("normal").onclick = () => handleAnsawer(5);
+document.getElementById("no").onclick = () => handleAnsawer(2);
 
 
