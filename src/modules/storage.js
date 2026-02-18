@@ -13,3 +13,4 @@ return mockTasks;
 export function saveTasks(tasks){
     localStorage.setItem("tasks",JSON.stringify(tasks));
 }
+
