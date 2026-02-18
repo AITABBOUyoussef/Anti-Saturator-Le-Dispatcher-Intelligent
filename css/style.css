@@ -1,0 +1,11 @@
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 14 \2502      background-color: variables.$bg-color; // \645 \62b \627 \644  \643 \64a \641 \627 \634  \62a \639 \64a \637  \644 \645 \62a \63a \64a \631 \d\a    \2502                        ^^^^^^^^^^^^^^^^^^^\a    \2575 \a   styles\\main.scss 14:23  root stylesheet";
+}
