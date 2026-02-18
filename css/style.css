@@ -1,9 +1,12 @@
-/* Error: Undefined variable.
- *    ,
- * 21 |       background-color: var.$color-teal; // Lon li khtartou f Figma
- *    |                         ^^^^^^^^^^^^^^^
- *    '
- *   styles\main.scss 21:25  root stylesheet */
+/* Error: There's already a module with namespace "variables".
+ *     ,
+ * 4   | @use"variables.scss";
+ *     | ==================== original @use
+ * ... |
+ * 6   | @use 'variables' ;
+ *     | ^^^^^^^^^^^^^^^^^ new @use
+ *     '
+ *   styles\main.scss 6:1  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +16,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 21 \2502        background-color: var.$color-teal; // Lon li khtartou f Figma\d\a    \2502                          ^^^^^^^^^^^^^^^\a    \2575 \a   styles\\main.scss 21:25  root stylesheet";
+  content: "Error: There's already a module with namespace \"variables\".\a     \2577 \a 4   \2502  @use\"variables.scss\";\d\a     \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original @use\a... \2502 \a 6   \2502  @use 'variables' ;\d\a     \2502  ^^^^^^^^^^^^^^^^^ new @use\a     \2575 \a   styles\\main.scss 6:1  root stylesheet";
 }
