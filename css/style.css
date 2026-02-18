@@ -1,6 +1,17 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 21 |       background-color: var.$color-teal; // Lon li khtartou f Figma
+ *    |                         ^^^^^^^^^^^^^^^
+ *    '
+ *   styles\main.scss 21:25  root stylesheet */
 
-/*# sourceMappingURL=style.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 21 \2502        background-color: var.$color-teal; // Lon li khtartou f Figma\d\a    \2502                          ^^^^^^^^^^^^^^^\a    \2575 \a   styles\\main.scss 21:25  root stylesheet";
+}
