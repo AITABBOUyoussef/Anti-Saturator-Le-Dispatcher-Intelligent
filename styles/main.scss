@@ -1,0 +1,15 @@
+          // 1. المتغيرات والـ Mixins (هادو كيكونوا هما اللولين)
+@use 'variables';
+@use 'mixins';
+
+// 2. التحريكات (Animations)
+@use 'animations';
+
+// 3. المكونات (Components)
+@use 'components';
+
+// هنا تقدر تزيد الـ Base styles ديالك
+body {
+    font-family: Arial, sans-serif;
+    background-color: variables.$bg-color; // مثال كيفاش تعيط لمتغير
+}

@@ -1,0 +1,20 @@
+{
+  "name": "anti-saturator-le-dispatcher-intelligent",
+  "version": "1.0.0",
+  "description": "Projet de gestion intelligente avec architecture JS modulaire",
+  "main": "script.js",
+  "type": "module",
+ "scripts": {
+  "sass:watch": "sass --watch styles/main.scss:css/style.css",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AITABBOUyoussef/Anti-Saturator-Le-Dispatcher-Intelligent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.97.3"
+  }
+}
