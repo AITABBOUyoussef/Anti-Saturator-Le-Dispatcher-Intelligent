@@ -1,4 +1,102 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #F8FAFC;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #E2E8F0;
+}
+.sidebar__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 3rem;
+}
+.sidebar__logo .logo-icon {
+  background: #00D1B2;
+  padding: 8px;
+  border-radius: 8px;
+}
+.sidebar__logo h1 {
+  font-size: 1.2rem;
+  color: #1A202C;
+}
+.sidebar__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.sidebar__actions .btn {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+.sidebar__actions .btn--primary {
+  background: #1A202C;
+  color: white;
+}
+.sidebar__actions .btn--primary:hover {
+  background: rgb(44.9428571429, 55.3142857143, 76.0571428571);
+}
+.sidebar__actions .btn--secondary {
+  background: #E2E8F0;
+  color: #4A5568;
+}
+.sidebar__actions .btn--secondary:hover {
+  background: rgb(209.1931818182, 218.6704545455, 231.3068181818);
+}
+.sidebar__nav {
+  flex-grow: 1;
+}
+.sidebar__nav ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar__nav ul li {
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #4A5568;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.sidebar__nav ul li.active {
+  background: rgb(183.5, 255, 244.3947368421);
+  color: #00D1B2;
+  font-weight: bold;
+}
+.sidebar__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E2E8F0;
+}
+.sidebar__profile img {
+  width: 40px;
+  border-radius: 50%;
+}
+.sidebar__profile .name {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.sidebar__profile .role {
+  font-size: 0.8rem;
+  color: #A0AEC0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: black;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
