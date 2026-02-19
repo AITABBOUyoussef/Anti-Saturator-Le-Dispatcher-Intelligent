@@ -1,0 +1,82 @@
+@use 'variables' as var;
+
+.task-card {
+    background: rgba(255, 255, 255, 0.7); // Glass effect
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+
+    &__title {
+        color: var.$color-dark;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+
+    &__subtitle {
+        color: #718096;
+        margin-bottom: 32px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+
+        label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var.$color-dark;
+            letter-spacing: 1px;
+        }
+
+        input {
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            background: rgba(248, 250, 252, 0.8);
+            transition: 0.3s;
+
+            &:focus {
+                outline: none;
+                border-color: var.$color-teal;
+                box-shadow: 0 0 0 3px rgba(0, 209, 178, 0.1);
+            }
+        }
+    }
+
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .btn--submit {
+        width: 100%;
+        padding: 16px;
+        background: var.$color-dark;
+        color: white;
+        border-radius: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: 0.3s;
+
+        &:hover {
+            background: var.$color-teal;
+            transform: translateY(-2px);
+        }
+    }
+
+    .error-message {
+        color: #E53E3E;
+        font-size: 0.8rem;
+        margin-top: 10px;
+        min-height: 1.2rem;
+    }
+}
