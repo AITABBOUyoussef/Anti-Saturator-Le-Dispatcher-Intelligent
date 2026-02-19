@@ -25,9 +25,9 @@ export const UI = {
 
 export const quiz= {
     afficherquiz:()=>{
-const Quiz = document.getElementById('Quiz'); 
-        if (!Quiz) return;
-        Quiz.innerHTML = `<div  id="q1">
+const root = document.getElementById('root'); 
+        if (!root) return;
+        root.innerHTML = `<div  id="q1">
         <h1>How was your day?</h1>
         <button id="good">good</button>
         <button id="notgood">Not so bad!</button>

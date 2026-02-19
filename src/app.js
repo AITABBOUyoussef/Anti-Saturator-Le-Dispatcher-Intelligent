@@ -1,16 +1,16 @@
 import { UI,quiz } from './modules/ui.js';
 
-
 import { getTasks, saveTasks } from "./modules/storage.js";
 import { validateTitle, validateScore } from "./modules/validator.js";
-import { addtaskkk } from './modules/todo.js';
+import { addtaskkk } from './modules/todo.js'; 
+import{quizzz }from './modules/quiz.js';
 // 1. Qbed l-bouton mn l-Sidebar
 const addTaskBtn = document.querySelector('.btn--secondary');
 const quizBtn = document.querySelector('.btn--primary');
 
 quizBtn.addEventListener('click',()=> {
     quiz.afficherquiz();
-   
+    quizzz ();
     
 })
 
@@ -30,7 +30,7 @@ addTaskBtn.addEventListener('click', () => {
 
   
   addBtn.addEventListener("click", () => {
-   console.log("rgefzdas");
+   
     addtaskkk(titleInput,urgencyInput,importanceInput,effortInput,formError,tasks)
   })
 });
