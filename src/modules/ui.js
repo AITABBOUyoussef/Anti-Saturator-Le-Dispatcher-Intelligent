@@ -6,18 +6,37 @@ export const UI = {
 
        
         root.innerHTML = `
-            <input type="text" id="title" placeholder="Entrer tasks name" />
-            <p id="titleError" class="error-message"></p>
-            <label for="urgency">Urgency (1-5):</label>
-            <input type="number" id="urgency" min="1" max="5" />
-            <label for="importance">Importance (1-5):</label>
-            <input type="number" id="importance" min="1" max="5" />
-            <label for="effort">Effort (1-5):</label>
-            <input type="number" id="effort" min="1" max="5" />
-            <button id="addTaskBtn">Add Task</button>
-            <p id="formError" class="error-message"></p>
-        `;
+            <div class="task-card">
+                <h2 class="task-card__title">Create New Task</h2>
+                <p class="task-card__subtitle">Define your priority and energy levels</p>
+                
+                <div class="task-card__form">
+                    <div class="input-group">
+                        <label for="title">TASK TITLE</label>
+                        <input type="text" id="title" placeholder="What are you working on?" />
+                        <p id="titleError" class="error-message"></p>
+                    </div>
 
+                    <div class="metrics-grid">
+                        <div class="input-group">
+                            <label for="urgency">URGENCY (1-5)</label>
+                            <input type="number" id="urgency" min="1" max="5" placeholder="Score" />
+                        </div>
+                        <div class="input-group">
+                            <label for="importance">IMPORTANCE (1-5)</label>
+                            <input type="number" id="importance" min="1" max="5" placeholder="Score" />
+                        </div>
+                        <div class="input-group">
+                            <label for="effort">EFFORT (1-5)</label>
+                            <input type="number" id="effort" min="1" max="5" placeholder="Score" />
+                        </div>
+                    </div>
+
+                    <button id="addTaskBtn" class="btn btn--submit">Add Task To Dashboard</button>
+                    <p id="formError" class="error-message"></p>
+                </div>
+            </div>
+        `;
         
     }
     
