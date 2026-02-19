@@ -4,7 +4,7 @@ export const UI = {
         const root = document.getElementById('root'); 
         if (!root) return;
 
-        // 1. Rsem l-HTML dial l-formulaire
+       
         root.innerHTML = `
             <input type="text" id="title" placeholder="Entrer tasks name" />
             <p id="titleError" class="error-message"></p>
@@ -21,4 +21,29 @@ export const UI = {
         
     }
     
+};
+
+export const quiz= {
+    afficherquiz:()=>{
+const Quiz = document.getElementById('Quiz'); 
+        if (!Quiz) return;
+        Quiz.innerHTML = `<div  id="q1">
+        <h1>How was your day?</h1>
+        <button id="good">good</button>
+        <button id="notgood">Not so bad!</button>
+        <button id="bad">Bad</button>
+    </div>
+    <div  id="q2" style="display:none;">
+        <h1>How are you feeling right now?</h1>
+        <button id="happy">Happy</button>
+        <button id="ok">Okey</button>
+        <button id="sad">Sad</button>
+    </div>
+    <div   id="q3" style="display:none;">
+        <h1>How motivated do you feel today?</h1>
+        <button id="very">Very motivated</button>
+        <button id="normal">Normal</button>
+        <button id="no">No motivation</button>
+    </div>`;
+    }
 };

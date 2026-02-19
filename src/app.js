@@ -1,10 +1,18 @@
-import { UI } from './modules/ui.js';
+import { UI,quiz } from './modules/ui.js';
+
 
 import { getTasks, saveTasks } from "./modules/storage.js";
 import { validateTitle, validateScore } from "./modules/validator.js";
 import { addtaskkk } from './modules/todo.js';
 // 1. Qbed l-bouton mn l-Sidebar
 const addTaskBtn = document.querySelector('.btn--secondary');
+const quizBtn = document.querySelector('.btn--primary');
+
+quizBtn.addEventListener('click',()=> {
+    quiz.afficherquiz();
+   
+    
+})
 
 // 2. Event Listener: Mnin l-user i-cliki, t-ban l-form
 addTaskBtn.addEventListener('click', () => {
