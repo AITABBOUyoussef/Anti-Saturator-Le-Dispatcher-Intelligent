@@ -1,29 +1,57 @@
-export function quizzz (){
-document.getElementById("good").onclick = () => nextQuestion(8, "q2");
-document.getElementById("notgood").onclick = () => nextQuestion(5, "q2");
-document.getElementById("bad").onclick = () => nextQuestion(2, "q2");
+import { UI } from "./ui.js";
 
-document.getElementById("happy").onclick = () => nextQuestion(9, "q3");
-document.getElementById("ok").onclick = () => nextQuestion(5, "q3");
-document.getElementById("sad").onclick = () => nextQuestion(2, "q3");
+export const quizData = [
+  {
+    question: "How was your day?",
+    options: [
+      { text: "Good", value: 8 },
+      { text: "Not bad", value: 5 },
+      { text: "Bad", value: 2 },
+    ],
+  },
+  {
+    question: "How are you feeling?",
+    options: [
+      { text: "Happy", value: 9 },
+      { text: "Okay", value: 5 },
+      { text: "Sad", value: 2 },
+    ],
+  },
+  {
+    question: "How is your motivation?",
+    options: [
+      { text: "High", value: 9 },
+      { text: "Normal", value: 5 },
+      { text: "Low", value: 1 },
+    ],
+  },
+];
 
-document.getElementById("very").onclick = () => finishQuiz(9);
-document.getElementById("normal").onclick = () => finishQuiz(5);
-document.getElementById("no").onclick = () => finishQuiz(1);
-
+let currentStep = 0;
 let totalScore = 0;
 
-
-
- function nextQuestion(value, nextId) {
-    totalScore += value;
-    document.getElementById(nextId).style.display = "block";
+export function quizzz() {
+  currentStep = 0;
+  totalScore = 0;
+  showNextStep();
 }
 
- function finishQuiz(value) {
-    totalScore += value;
-    const energy = Math.round(totalScore / 3);
-    alert("Your energy level is: " + energy);
+function showNextStep() {
+  if (currentStep < quizData.length) {
+    UI.renderQuestion(
+      currentStep,
+      quizData[currentStep],
+      quizData.length,
+      (value) => {
+        totalScore += value;
+        currentStep++;
+        showNextStep();
+      },
+    );
+  } else {
+    const energy = Math.round(totalScore / quizData.length);
+      UI.renderResult(energy);
+      return energy
+      energy=10
+  }
 }
-}
-
