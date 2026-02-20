@@ -21,7 +21,9 @@ if (TaskBtn) {
         const energy = getEnergy() || 5; 
         const topTask = getTopTask(tasks, energy);
         UI.renderTopTask(topTask);
+        console.log("cccccc")
     });
+
 }
 
 if (addTaskBtn) {
