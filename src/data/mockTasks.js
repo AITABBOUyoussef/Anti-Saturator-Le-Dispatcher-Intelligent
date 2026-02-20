@@ -18,6 +18,6 @@ export const mockTasks = [
         title:"Organiser le bureau",
         urgency:2,
         importance:2,
-        effort:1
+        effort:6
     }
 ];

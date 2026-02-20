@@ -1,8 +1,9 @@
 
-import { UI } from './modules/ui.js';
+import { UI, renderTopTask } from "./modules/ui.js";
 import { quizzz } from './modules/quiz.js';
 import { getTasks } from "./modules/storage.js";
-import { addtaskkk } from './modules/todo.js'; 
+import { addtaskkk } from './modules/todo.js';
+
 
 
 const addTaskBtn = document.querySelector('.btn--secondary');
@@ -15,7 +16,7 @@ if (startQuizBtn) {
 }
 
 if (TaskBtn) {
-    TaskBtn.addEventListener('click', quizzz);
+    TaskBtn.addEventListener("click", renderTopTask);
 }
 
 
