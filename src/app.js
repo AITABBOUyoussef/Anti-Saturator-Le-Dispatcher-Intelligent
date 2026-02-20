@@ -1,9 +1,9 @@
 
-import { UI } from './modules/ui.js';
+import { UI } from "./modules/ui.js"; 
 import { quizzz } from './modules/quiz.js';
-import { getTasks } from "./modules/storage.js";
-import { addtaskkk } from './modules/todo.js'; 
-
+import { getTasks, getEnergy } from "./modules/storage.js";
+import { addtaskkk } from './modules/todo.js';
+import { getTopTask } from "./modules/sorter.js"; 
 
 const addTaskBtn = document.querySelector('.btn--secondary');
 const startQuizBtn = document.getElementById('start-quiz');
@@ -14,10 +14,15 @@ if (startQuizBtn) {
     startQuizBtn.addEventListener('click', quizzz);
 }
 
-if (TaskBtn) {
-    TaskBtn.addEventListener('click', quizzz);
-}
 
+if (TaskBtn) {
+    TaskBtn.addEventListener("click", () => {
+        const tasks = getTasks();
+        const energy = getEnergy() || 5; 
+        const topTask = getTopTask(tasks, energy);
+        UI.renderTopTask(topTask);
+    });
+}
 
 if (addTaskBtn) {
     addTaskBtn.addEventListener('click', () => {
