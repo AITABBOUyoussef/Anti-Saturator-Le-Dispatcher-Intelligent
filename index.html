@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Anti-Saturator | Productivity</title>
+    
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar__logo">
+                <span class="logo-icon">⚡</span>
+                <h1>Anti-Saturator</h1>
+            </div>
+
+            <div class="sidebar__actions">
+                <button class="btn btn--primary" id="start-quiz">Start Energy Quiz <span>→</span></button>
+                <button class="btn btn--secondary" id="open-task-modal">Create Task <span>+</span></button>
+                <button class="btn btn-task" id="open-task">Task <span>*</span></button>
+            </div>
+
+            <nav class="sidebar__nav">
+                <ul>
+                    <li class="active">Dashboard</li>
+                    <li>Flow Analytics</li>
+                    <li>Mindfulness</li>
+                    <li>History</li>
+                </ul>
+            </nav>
+
+            <div class="sidebar__profile">
+                <img src="https://ui-avatars.com/api/?name=Elena+R" alt="Profile">
+                <div class="profile-info">
+                    <p class="name">Elena R.</p>
+                    <p class="role">Pro Member</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div id="root"></div>
+           
+        </main>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
 </body>
 </html>

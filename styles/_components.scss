@@ -1,0 +1,109 @@
+@use 'variables' as var;
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: var.$color-bg;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var.$color-light-gray;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 3rem;
+        
+        .logo-icon {
+            background: var.$color-teal;
+            padding: 8px;
+            border-radius: 8px;
+        }
+        h1 { font-size: 1.2rem; color: var.$color-dark; }
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 3rem;
+
+        .btn {
+            padding: 12px;
+            border-radius: var.$radius-md;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            transition: var.$transition;
+
+            &--primary {
+                background: var.$color-dark;
+                color: white;
+                &:hover { background: lighten(var.$color-dark, 10%); }
+            }
+
+            &--secondary {
+                background: var.$color-light-gray;
+                color: var.$color-text;
+                &:hover { background: darken(var.$color-light-gray, 5%); }
+            }
+        }
+    }
+
+    &__nav {
+        flex-grow: 1;
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                padding: 10px 15px;
+                border-radius: 8px;
+                color: var.$color-text;
+                cursor: pointer;
+                margin-bottom: 5px;
+                &.active {
+                    background: lighten(var.$color-teal, 45%);
+                    color: var.$color-teal;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-top: 1.5rem;
+        border-top: 1px solid var.$color-light-gray;
+        img { width: 40px; border-radius: 50%; }
+        .name { font-weight: bold; font-size: 0.9rem; }
+        .role { font-size: 0.8rem; color: #A0AEC0; }
+    }
+}
+
+
+// ... (الـ Code ديال الـ Sidebar خليك كيف ما هو)
+
+.main-content {
+    flex: 1;                // باش ياخد المساحة اللي بقات من مور الـ Sidebar
+    display: flex;
+    justify-content: center; // يسونطري الـ Card بالعرض (Horizontal)
+    align-items: center;     // يسونطري الـ Card بالطول (Vertical)
+    min-height: 100vh;       // باش يشد الطول ديال الشاشة كاملة
+    background-color: var.$color-bg; // لون الخلفية من الـ Variables
+    padding: 2rem;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
