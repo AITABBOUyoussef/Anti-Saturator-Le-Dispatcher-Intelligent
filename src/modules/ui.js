@@ -1,4 +1,4 @@
-
+// src/modules/ui.js
 export const UI = {
   renderAddTaskForm: () => {
     const root = document.getElementById("root");
@@ -48,21 +48,24 @@ export const UI = {
             </div>`;
   },
 
-  renderTopTask: (mockTasks) => {
+  renderTopTask: (task) => {
     const root = document.getElementById("root");
-    if (!mockTasks) {
-      root.innerHTML = `<div class="task-card animate-in">
-                <h2>No tasks available</h2>
+    if (!task) {
+      root.innerHTML = `
+            <div class="task-card animate-in">
+                <h2>No tasks available for your energy</h2>
+                <p>Try adding a task or finishing the quiz first.</p>
             </div>`;
       return;
     }
     root.innerHTML = `
             <div class="task-card animate-in">
                 <h2>Top Task For You</h2>
-                <p><strong>Title:</strong> ${mockTasks.title}</p>
-                <p><strong>Urgency:</strong> ${mockTasks.urgency}</p>
-                <p><strong>Importance:</strong> ${mockTasks.importance}</p>
-                <p><strong>Effort:</strong> ${mockTasks.effort}</p>
+                <p><strong>Title:</strong> ${task.title}</p>
+                <p><strong>Urgency:</strong> ${task.urgency}/5</p>
+                <p><strong>Importance:</strong> ${task.importance}/5</p>
+                <p><strong>Effort:</strong> ${task.effort}/5</p>
+                <p><strong>Focus Score:</strong> ${task.score}</p>
             </div>`;
   },
 };
