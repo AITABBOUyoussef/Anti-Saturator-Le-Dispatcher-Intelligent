@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db3b4585-b736-474f-b2a1-c2da2e998a4d" name="Changes" comment="" />
+    <list default="true" id="db3b4585-b736-474f-b2a1-c2da2e998a4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_components.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css.map" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -89,3 +89,21 @@
     }
 }
 
+
+// ... (الـ Code ديال الـ Sidebar خليك كيف ما هو)
+
+.main-content {
+    flex: 1;                // باش ياخد المساحة اللي بقات من مور الـ Sidebar
+    display: flex;
+    justify-content: center; // يسونطري الـ Card بالعرض (Horizontal)
+    align-items: center;     // يسونطري الـ Card بالطول (Vertical)
+    min-height: 100vh;       // باش يشد الطول ديال الشاشة كاملة
+    background-color: var.$color-bg; // لون الخلفية من الـ Variables
+    padding: 2rem;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
