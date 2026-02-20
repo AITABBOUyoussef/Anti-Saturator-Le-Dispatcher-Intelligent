@@ -13,3 +13,14 @@ return mockTasks;
 export function saveTasks(tasks){
     localStorage.setItem("tasks",JSON.stringify(tasks));
 }
+
+export function saveEnergy(energy) {
+  localStorage.setItem("energy", JSON.stringify(energy));
+}
+
+export function getEnergy() {
+  const data = localStorage.getItem("energy");
+  return data ? JSON.parse(data) : null;
+}
+
+
