@@ -5,19 +5,17 @@ import { getEnergy } from "./storage.js";
 let energy = getEnergy()
 
 export function filterByEnergy(tasks, energy) {
-  const easyTasks = tasks.filter((task) => task.effort <= 3);
+  const easyTasks = tasks.filter((task) => task.effort <= 2);
   const mediumTasks = tasks.filter(
-    (task) => task.effort > 3 && task.effort <= 6,
+    (task) => task.effort > 2 && task.effort <= 4,
   );
-  const hardTasks = tasks.filter((task) => task.effort > 6);
+  const hardTasks = tasks.filter((task) => task.effort > 4);
 
   if (energy <= 3) {
     return easyTasks;
   } else if (energy > 3 && energy <= 6) {
     return mediumTasks;
-  } else if(energy>6) {
-    return hardTasks;
-  }
+  } 
   else {
     return hardTasks;
   }
