@@ -1,4 +1,4 @@
-// src/modules/ui.js
+
 export const UI = {
   renderAddTaskForm: () => {
     const root = document.getElementById("root");
