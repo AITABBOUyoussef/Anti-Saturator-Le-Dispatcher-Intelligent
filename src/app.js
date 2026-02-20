@@ -7,10 +7,15 @@ import { addtaskkk } from './modules/todo.js';
 
 const addTaskBtn = document.querySelector('.btn--secondary');
 const startQuizBtn = document.getElementById('start-quiz');
+const TaskBtn = document.getElementById('open-task');
 
 
 if (startQuizBtn) {
     startQuizBtn.addEventListener('click', quizzz);
+}
+
+if (TaskBtn) {
+    TaskBtn.addEventListener('click', quizzz);
 }
 
 
