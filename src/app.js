@@ -1,6 +1,5 @@
 import { getTasks, saveTasks } from "./modules/storage.js";
 import { validateTitle, validateScore } from "./modules/validator.js";
-import { saveEnergy, getEnergy } from "./modules/storage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -56,8 +55,3 @@ document.addEventListener("DOMContentLoaded", () => {
     effortInput.value = "";
   });
 });
-
-
-saveEnergy(7);
-
-console.log("Energy:", getEnergy());
